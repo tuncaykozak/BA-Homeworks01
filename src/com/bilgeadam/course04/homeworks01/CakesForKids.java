@@ -49,11 +49,12 @@ public class CakesForKids {
 		System.out.println();
 		ArrayList<String> outputs = permute(cakes, 0, c, k, new ArrayList<String>());
 
-		Collections.sort(outputs);
+		
 		// outputs.sort(Comparator.naturalOrder());
 		Set<String> set = new HashSet<>(outputs);
 		outputs.clear();
 		outputs.addAll(set);
+		Collections.sort(outputs);
 		for (int i = 0; i < outputs.size(); i++) {
 			System.out.println(outputs.get(i));
 		}
